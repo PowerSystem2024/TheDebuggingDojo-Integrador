@@ -13,9 +13,24 @@
         - Schutt Valentin
 */
 package proyecto_integrador;
-
+import java.util.Scanner;
+import java.util.Random;
 
 
 public class Proyecto_Integrador {
+    static Scanner scanner = new Scanner(System.in);
+    static Random random = new Random();
+
+    // SubProceso Pedir Mozos
+    public static void pedirMozo(String[] mozos) {
+        for (int i = 0; i < 4; i++) {
+            System.out.print("Digite el nombre del mozo " + (i + 1) + ": ");
+            mozos[i] = scanner.nextLine();
+        }
+        System.out.println();
+    }
+
+
+
     
 }
