@@ -30,7 +30,26 @@ public class Proyecto_Integrador {
         System.out.println();
     }
 
+    // SubProceso Mostrar Matriz
+    public static void mostrarMatrizMozo(int[][] matriz, String[] mozos) {
+        System.out.println("\n\nGráfico de mozos por mesa atendida.");
+        System.out.println("\nGastos por Mesa\n");
 
+        for (int i = 0; i < 4; i++) {
+            System.out.print("Mozo " + mozos[i]);
+
+            int letrasM = 15 - mozos[i].length();
+            for (int k = 0; k < letrasM; k++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < 5; j++) {
+                System.out.print(matriz[i][j] >= 10000 ? "$" + matriz[i][j] + "   " : "$0" + matriz[i][j] + "   ");
+            }
+            System.out.println();
+        }
+        System.out.println("\n\n");
+    }
 
     
 }
