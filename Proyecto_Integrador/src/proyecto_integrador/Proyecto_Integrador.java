@@ -130,7 +130,20 @@ public class Proyecto_Integrador {
             for (int j = 0; j < 5; j++) {
                 sumaTotalMesas += matriz[i][j];
             }
+            propinaTotal += propina[i];
         }
+
+        // Llamar SubProceso Delivery y capturar el valor devuelto
+        int ventaDelivery = deliveryTotal2(delivery);
+
+        // Ganancias por semana
+        double gananciaSemana = (sumaTotalMesas * 7) + (propinaTotal * 7) + ventaDelivery;
+    
+        // Llamar SubProceso Pedir Mozos
+        pedirMozo(mozos);
+
+
+
 
     }
 
