@@ -13,9 +13,9 @@
         - Schutt Valentin
 */
 package proyecto_integrador;
+
 import java.util.Scanner;
 import java.util.Random;
-
 
 public class Proyecto_Integrador {
     static Scanner scanner = new Scanner(System.in);
@@ -51,8 +51,8 @@ public class Proyecto_Integrador {
         System.out.println("\n\n");
     }
 
-      // SubProceso Llenar Delivery y calcular total
-      public static int deliveryTotal2(int[] delivery) {
+    // SubProceso Llenar Delivery y calcular total
+    public static int deliveryTotal2(int[] delivery) {
         int ventaDelivery = 0; // Inicializar aquí
         for (int i = 0; i < 7; i++) {
             delivery[i] = random.nextInt(20001) + 5000;
@@ -60,7 +60,7 @@ public class Proyecto_Integrador {
         }
         return ventaDelivery; // Devolver el total
     }
-    
+
     // SubProceso Mostrar Delivery
     public static void deliveryTotal(int[] delivery, int ventaDelivery) {
         System.out.println("\nGráfico de delivery por día de semana.");
@@ -98,5 +98,25 @@ public class Proyecto_Integrador {
         }
         System.out.println();
     }
-    
+
+       // SubProceso Promedio
+       public static void promedio(double gananciaSemana) {
+        double promedioSemana = gananciaSemana / 7;
+        System.out.println("El promedio general de ganancias por día es $" + promedioSemana);
+    }
+
+    // Cuerpo principal
+    public static void main(String[] args) {
+        int[][] matriz = new int[4][5];
+        int[] propina = new int[4];
+        String[] mozos = new String[4];
+        int[] delivery = new int[7];
+        double[] precioHora = new double[4];
+        int[] horaSemanal = new int[4];
+
+        double sumaTotalMesas = 0, propinaTotal = 0;
+        int resp;
+
+    }
+
 }
