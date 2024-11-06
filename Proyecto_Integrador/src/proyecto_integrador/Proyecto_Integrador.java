@@ -51,5 +51,27 @@ public class Proyecto_Integrador {
         System.out.println("\n\n");
     }
 
+      // SubProceso Llenar Delivery y calcular total
+      public static int deliveryTotal2(int[] delivery) {
+        int ventaDelivery = 0; // Inicializar aquí
+        for (int i = 0; i < 7; i++) {
+            delivery[i] = random.nextInt(20001) + 5000;
+            ventaDelivery += delivery[i];
+        }
+        return ventaDelivery; // Devolver el total
+    }
+    
+    // SubProceso Mostrar Delivery
+    public static void deliveryTotal(int[] delivery, int ventaDelivery) {
+        System.out.println("\nGráfico de delivery por día de semana.");
+        System.out.println("\n             Lun      Mart     Mierc    Juev     Vier     Sab      Dom");
+        System.out.print("Delivery:   ");
+
+        for (int i = 0; i < 7; i++) {
+            System.out.print(delivery[i] >= 10000 ? "$" + delivery[i] + "   " : "$0" + delivery[i] + "   ");
+        }
+
+        System.out.println("\n\nLas ganancias totales en una semana de delivery son de $" + ventaDelivery + "\n");
+    }
     
 }
