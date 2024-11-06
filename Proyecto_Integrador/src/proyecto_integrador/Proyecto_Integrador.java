@@ -114,8 +114,23 @@ public class Proyecto_Integrador {
         double[] precioHora = new double[4];
         int[] horaSemanal = new int[4];
 
-        double sumaTotalMesas = 0, propinaTotal = 0;
-        int resp;
+        double sumaTotalMesas = 0, propinaTotal = 0, gananciaSemana = 0, promedioSemana = 0;
+        int ventaDelivery = 0, resp;
+
+        // Llenar matriz con ganancias y propinas
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
+                matriz[i][j] = random.nextInt(90001) + 5000;
+            }
+            propina[i] = random.nextInt(61) * 100 + 4000;
+        }
+
+        // Total Mesas
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
+                sumaTotalMesas += matriz[i][j];
+            }
+        }
 
     }
 
