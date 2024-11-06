@@ -73,5 +73,30 @@ public class Proyecto_Integrador {
 
         System.out.println("\n\nLas ganancias totales en una semana de delivery son de $" + ventaDelivery + "\n");
     }
+
+    // SubProceso Sueldos
+    public static void sueldoTotal(double[] precioHora, int[] horaSemanal, String[] mozos) {
+        for (int i = 0; i < 4; i++) {
+            System.out.print("Ingrese el pago por hora del mozo " + mozos[i] + ": ");
+            precioHora[i] = scanner.nextDouble();
+            System.out.print("Ingrese las horas trabajadas en la semana del mozo " + mozos[i] + ": ");
+            horaSemanal[i] = scanner.nextInt();
+            System.out.println();
+        }
+
+        System.out.println("\n\nSueldo de cada mozo:\n");
+
+        for (int i = 0; i < 4; i++) {
+            System.out.print(" Sueldo del mozo " + mozos[i]);
+
+            int letrasM = 15 - mozos[i].length();
+            for (int k = 0; k < letrasM; k++) {
+                System.out.print(" ");
+            }
+
+            System.out.println("$" + (precioHora[i] * horaSemanal[i]));
+        }
+        System.out.println();
+    }
     
 }
