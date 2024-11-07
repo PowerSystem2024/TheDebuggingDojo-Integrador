@@ -160,4 +160,41 @@ public class Proyecto_Integrador {
 
     }
 
+             switch (resp) {
+                case 1:
+                    mostrarMatrizMozo(matriz, mozos);
+                    System.out.println("Los ingresos totales por día en las mesas es: $" + sumaTotalMesas);
+                    break;
+                case 2:
+                    System.out.println("\nLa propina total del día es de: $" + propinaTotal);
+                    break;
+                case 3:
+                    deliveryTotal(delivery, ventaDelivery);
+                    break;
+                case 4:
+                    System.out.println("\nTeniendo en cuenta la ganancia por mesa, propina y delivery, el total en una semana corresponde a $" + gananciaSemana);
+                    break;
+                case 5:
+                    System.out.println("");
+                    sueldoTotal(precioHora, horaSemanal, mozos);
+                    break;
+                case 6:
+                    promedio(gananciaSemana);
+                    break;
+                case 7:
+                    double propinaEmpleado = propinaTotal / 4;
+                    System.out.println("\nLa propina que le toca a cada empleado es: $" + propinaEmpleado);
+                    break;
+                case 0:
+                    System.out.println("Saliendo del sistema...");
+                    break;
+                default:
+                    System.out.println("\nEntrada no válida. Ingrese una opción de menú válida.");
+                    System.out.println("");
+                    break;
+            }
+        } while (resp != 0);
+    }
+}
+
 }
