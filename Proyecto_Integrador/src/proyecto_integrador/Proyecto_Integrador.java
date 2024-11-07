@@ -142,7 +142,20 @@ public class Proyecto_Integrador {
         // Llamar SubProceso Pedir Mozos
         pedirMozo(mozos);
 
-
+    // Menú principal
+        do {
+            System.out.println("\n-------MENU DE CONTROL---------");
+            System.out.println("1. Ganancias de mesas por día.");
+            System.out.println("2. Propinas por día.");
+            System.out.println("3. Delivery por día de la semana.");
+            System.out.println("4. Ganancia de la semana.");
+            System.out.println("5. Calcular el sueldo de los mozos.");
+            System.out.println("6. Promedio de venta.");
+            System.out.println("7. Propina por empleado.");
+            System.out.println("0. Para salir.");
+            System.out.print("Digite una opción de menú: ");
+            resp = scanner.nextInt();
+            System.out.println("");
 
 
     }
