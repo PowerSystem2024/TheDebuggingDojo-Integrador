@@ -99,8 +99,8 @@ public class Proyecto_Integrador {
         System.out.println();
     }
 
-       // SubProceso Promedio
-       public static void promedio(double gananciaSemana) {
+    // SubProceso Promedio
+    public static void promedio(double gananciaSemana) {
         double promedioSemana = gananciaSemana / 7;
         System.out.println("El promedio general de ganancias por día es $" + promedioSemana);
     }
@@ -114,8 +114,8 @@ public class Proyecto_Integrador {
         double[] precioHora = new double[4];
         int[] horaSemanal = new int[4];
 
-        double sumaTotalMesas = 0, propinaTotal = 0, gananciaSemana = 0, promedioSemana = 0;
-        int ventaDelivery = 0, resp;
+        double sumaTotalMesas = 0, propinaTotal = 0;
+        int resp;
 
         // Llenar matriz con ganancias y propinas
         for (int i = 0; i < 4; i++) {
@@ -125,7 +125,7 @@ public class Proyecto_Integrador {
             propina[i] = random.nextInt(61) * 100 + 4000;
         }
 
-        // Total Mesas
+        // Calcular total de mesas y propinas
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
                 sumaTotalMesas += matriz[i][j];
@@ -138,11 +138,11 @@ public class Proyecto_Integrador {
 
         // Ganancias por semana
         double gananciaSemana = (sumaTotalMesas * 7) + (propinaTotal * 7) + ventaDelivery;
-    
+
         // Llamar SubProceso Pedir Mozos
         pedirMozo(mozos);
 
-    // Menú principal
+        // Menú principal
         do {
             System.out.println("\n-------MENU DE CONTROL---------");
             System.out.println("1. Ganancias de mesas por día.");
@@ -157,10 +157,8 @@ public class Proyecto_Integrador {
             resp = scanner.nextInt();
             System.out.println("");
 
-
-    }
-
-             switch (resp) {
+            
+            switch (resp) {
                 case 1:
                     mostrarMatrizMozo(matriz, mozos);
                     System.out.println("Los ingresos totales por día en las mesas es: $" + sumaTotalMesas);
@@ -195,6 +193,4 @@ public class Proyecto_Integrador {
             }
         } while (resp != 0);
     }
-}
-
 }
